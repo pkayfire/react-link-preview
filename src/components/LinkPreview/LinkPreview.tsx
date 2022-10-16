@@ -49,7 +49,6 @@ export interface LinkPreviewProps {
   /* Whether the placeholder image is displayed in case no image could be scraped */
   showPlaceholderIfNoImage?: boolean;
   onSuccess?: (metadata: APIResponse | null) => void;
-  cardType?: string;
 }
 
 export interface APIResponse {
@@ -163,8 +162,6 @@ export const LinkPreview: React.FC<LinkPreviewProps> = ({
     window.open(url, browserTarget);
   };
 
-  console.log(cardType);
-
   if (cardType === 'square') {
     return (
       <div
@@ -181,7 +178,7 @@ export const LinkPreview: React.FC<LinkPreviewProps> = ({
               borderTopRightRadius: borderRadius,
               backgroundImage: `url(${
                 explicitImageSrc || image || fallbackImageSrc
-              }), url(${fallbackImageSrc})`,
+              })`,
               height: imageHeight,
             }}
             className='Image-Square'

@@ -9,7 +9,7 @@ const customFetcher = async (url: string) => {
     title: json.title,
     description: json.description,
     image: json.image,
-    cardType: json.image_x === json.image_y ? 'square' : 'rectangle',
+    cardType: json.image_x === json.image_y || json.image_x < 300 ? 'square' : 'rectangle',
     siteName: json.site_name,
     hostname: (new URL(url)).hostname,
   };
@@ -17,6 +17,7 @@ const customFetcher = async (url: string) => {
 
 storiesOf('LinkPreview', module)
   .add('Default', () => <LinkPreview url='https://barcauniversal.com' fetcher={customFetcher} />)
+  .add('Default2', () => <LinkPreview descriptionLength={90} url='https://www.paradigm.xyz/2022/08/das' fetcher={customFetcher} />)
   .add('Article', () => (
     <LinkPreview url='https://barcauniversal.com/predicted-barcelona-lineup-against-eibar/' fetcher={customFetcher} />
   ))
