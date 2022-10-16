@@ -12,13 +12,13 @@
     "preview",
     "card"
   ],
-  "homepage": "https://github.com/dhaiwat10/react-link-preview",
+  "homepage": "https://github.com/pkayfire/react-link-preview",
   "bugs": {
-    "url": "https://github.com/dhaiwat10/react-link-preview/issues"
+    "url": "https://github.com/pkayfire/react-link-preview/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dhaiwat10/react-link-preview.git"
+    "url": "git+https://github.com/pkayfire/react-link-preview.git"
   },
   "scripts": {
     "build": "yarn clean & rollup -c",
