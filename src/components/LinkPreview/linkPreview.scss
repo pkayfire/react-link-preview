@@ -12,11 +12,16 @@ $secondary: rgb(100, 100, 100);
   color: $primary;
   transition: 0.3s all ease;
   height: fit-content;
+  max-width: 500px;
 
   &:hover {
     background-color: rgb(250, 250, 250);
     cursor: pointer;
   }
+}
+
+.Square {
+  flex-direction: row;
 }
 
 .Secondary {
@@ -37,6 +42,16 @@ $secondary: rgb(100, 100, 100);
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30vh;
+}
+
+.Image-Square {
+  width: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 30vh;
