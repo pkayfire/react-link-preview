@@ -222,13 +222,21 @@ export const LinkPreview: React.FC<LinkPreviewProps> = ({
             style={{
               borderTopLeftRadius: borderRadius,
               borderTopRightRadius: borderRadius,
-              backgroundImage: `url(${
-                explicitImageSrc || image || fallbackImageSrc
-              }), url(${fallbackImageSrc})`,
               height: imageHeight,
             }}
             className='Image'
-          ></div>
+          >
+            <img
+              style={{
+                maxHeight: '100%',
+                maxWidth: '100%',
+                borderTopLeftRadius: borderRadius,
+                borderTopRightRadius: borderRadius,
+              }}
+              src={explicitImageSrc || image || fallbackImageSrc}
+              alt=''
+            />
+          </div>
         )}
         <div className='LowerContainer'>
           <h3 data-testid='title' className='Title' style={{ color: primaryTextColor }}>

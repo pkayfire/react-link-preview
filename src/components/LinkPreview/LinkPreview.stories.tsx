@@ -85,5 +85,9 @@ storiesOf('LinkPreview', module)
   ))
   .add('Square Card Type', () => (
     <LinkPreview url='https://danromero.org/books/' fetcher={customFetcher} />
+  ))
+  .add('Broken Link', () => (
+    <LinkPreview url='https://redfin.com' fetcher={customFetcher} />
   ));
+
 
