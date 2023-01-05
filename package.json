@@ -1,7 +1,10 @@
 {
   "name": "@pkayfire/react-link-preview",
   "license": "MIT",
-  "version": "1.6.2",
+  "version": "1.6.4",
+  "files": [
+    "dist"
+  ],
   "private": false,
   "description": "React library to preview links.",
   "author": "Dhaiwat Pandya",
