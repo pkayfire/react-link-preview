@@ -45,6 +45,11 @@ $secondary: rgb(100, 100, 100);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  img {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
 }
 
 .Image-Square {
@@ -66,10 +71,6 @@ $secondary: rgb(100, 100, 100);
 @media (max-width: 640px) {
   .Description {
     display: none;
-  }
-
-  .Image {
-    min-height: 25vh;
   }
 }
 
